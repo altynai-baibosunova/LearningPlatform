@@ -1,38 +1,26 @@
+// App.tsx
 import React from "react";
-import "./App.css";
-import logo from "./assets/logo.png";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MainPage from "./pages/MainPage";
+import JavaMainPage from "./pages/Java/Java";
+import Theme1Page from "./pages/Java/ITheme1_IntroductionBasics/Theme1Page";
+import JavaScriptPage from "./pages/JavaScript";
+import PythonPage from "./pages/Python";
+import Navbar from "./components/Navbar";
 
-const courses = [
-  "Java Fundamental",
-  "Python Fundamental",
-  "JavaScript Fundamental",
-];
-
-const App: React.FC = () => {
+function App() {
   return (
-    <div style={{ padding: "20px", textAlign: "center" }}>
-      <img src={logo} alt="Logo" style={{ width: "120px" }} />
-
-      <h1>Learning Platform</h1>
-      <h2>Courses</h2>
-
-      <ul style={{ listStyle: "none", padding: 0 }}>
-        {courses.map((course, index) => (
-          <li
-            key={index}
-            style={{
-              margin: "10px 0",
-              padding: "10px",
-              border: "1px solid #ccc",
-              borderRadius: "6px",
-            }}
-          >
-            {course}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/java" element={<JavaMainPage />} />
+        <Route path="/java/theme1" element={<Theme1Page />} />
+        <Route path="/javascript" element={<JavaScriptPage />} />
+        <Route path="/python" element={<PythonPage />} />
+      </Routes>
+    </Router>
   );
-};
+}
 
 export default App;
