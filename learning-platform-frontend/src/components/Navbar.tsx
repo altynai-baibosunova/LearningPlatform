@@ -1,7 +1,9 @@
+// src/components/Navbar.tsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
+// Courses with className for styling buttons
 const courses = [
   { name: "Java Course", className: "java-course", path: "/java" },
   { name: "Python Course", className: "python-course", path: "/python" },
@@ -12,11 +14,9 @@ const Navbar: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <h1 className="navbar-title">Learning Platform</h1>
-      <div className="navbar-subtitle">
-        Select a course to start learning:
-      </div>
+      <p className="navbar-subtitle">Select a course to start learning:</p>
 
       <div className="course-buttons">
         {courses.map((course) => (
@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
           </button>
         ))}
       </div>
-    </div>
+    </nav>
   );
 };
 
