@@ -1,32 +1,83 @@
-// src/pages/Java/javaThemesContent.ts
+import React, { ReactNode } from "react";
 
-// Define the TypeScript interface for a Java theme/lesson
-export interface JavaTheme {
-  id: string;       // unique ID used in URL
-  title: string;    // lesson title
-  content: string;  // lesson content (can be text, HTML, or JSX string)
-}
+// Import all theme components
+import Intro from "./themes/Intro";
+import JavaVariables from "./themes/JavaVariables";
+import Methods from "./themes/Methods";
+import Strings from "./themes/Strings";
+import Arrays from "./themes/Arrays";
+import OOP from "./themes/OOP";
+import Interfaces from "./themes/Interfaces";
+import Exceptions from "./themes/Exceptions";
+import Collections from "./themes/Collections";
+import Generics from "./themes/Generics";
+import Loops from "./themes/Loops";
+import Java8 from "./themes/Java8";
+import JDBC from "./themes/JDBC";
+import Multithreading from "./themes/Multithreading";
+import Serialization from "./themes/Serialization";
+import Networking from "./themes/Networking";
+import Swing from "./themes/Swing";
 
-// Sample lessons array
+export type JavaTheme = {
+  id: string;
+  title: string;
+  content: ReactNode;
+};
+
 export const javaThemes: JavaTheme[] = [
-  {
-    id: "1",
-    title: "Introduction to Java",
-    content: "Java is a high-level, class-based, object-oriented programming language..."
-  },
-  {
-    id: "2",
-    title: "Object-Oriented Programming",
-    content: "OOP in Java allows you to create classes and objects, encapsulation, inheritance, and polymorphism..."
-  },
-  {
-    id: "3",
-    title: "Java Collections Framework",
-    content: "Collections in Java include List, Set, Map, and Queue. They help manage groups of objects efficiently..."
-  },
-  {
-    id: "4",
-    title: "Exception Handling",
-    content: "Java provides try, catch, finally blocks and custom exceptions for robust error handling..."
-  }
+  { id: "java-intro", title: "Introduction to Java", content: <Intro /> },
+  { id: "java-variables", title: "Variables", content: <JavaVariables /> },
+  { id: "java-methods", title: "Methods", content: <Methods /> },
+  { id: "java-strings", title: "Strings", content: <Strings /> },
+  { id: "java-arrays", title: "Arrays", content: <Arrays /> },
+  { id: "java-oop", title: "Object-Oriented Programming", content: <OOP /> },
+  { id: "java-interfaces", title: "Interfaces & Abstract Classes", content: <Interfaces /> },
+  { id: "java-exceptions", title: "Exception Handling", content: <Exceptions /> },
+  { id: "java-collections", title: "Collections Framework", content: <Collections /> },
+  { id: "java-generics", title: "Generics", content: <Generics /> },
+  { id: "java-loops", title: "Loops", content: <Loops /> },
+  { id: "java-java8", title: "Java 8 Features (Streams & Lambdas)", content: <Java8 /> },
+  { id: "java-jdbc", title: "JDBC (Database Connectivity)", content: <JDBC /> },
+  { id: "java-multithreading", title: "Multithreading", content: <Multithreading /> },
+  { id: "java-serialization", title: "Serialization", content: <Serialization /> },
+  { id: "java-networking", title: "Networking", content: <Networking /> },
+  { id: "java-gui-swing", title: "Java GUI (Swing Basics)", content: <Swing /> },
 ];
+
+
+
+// import { ReactNode } from "react";
+// import Intro from "./themes/Intro";
+// import OOP from "./themes/OOP";
+// import Collections from "./themes/Collections";
+// import Exceptions from "./themes/Exceptions";
+//
+// export type JavaTheme = {
+//   id: string;
+//   title: string;
+//   content: ReactNode;
+// };
+//
+// export const javaThemes: JavaTheme[] = [
+//   {
+//     id: "java-introduction",
+//     title: "Introduction to Java",
+//     content: <Intro />,
+//   },
+//   {
+//     id: "oop",
+//     title: "Object-Oriented Programming",
+//     content: <OOP />,
+//   },
+//   {
+//     id: "collections",
+//     title: "Java Collections Framework",
+//     content: <Collections />,
+//   },
+//   {
+//     id: "exceptions",
+//     title: "Exception Handling",
+//     content: <Exceptions />,
+//   },
+// ];
