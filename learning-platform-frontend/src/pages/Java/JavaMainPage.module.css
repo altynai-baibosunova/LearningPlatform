@@ -1,0 +1,34 @@
+.java-container {
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.java-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+
+.java-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.java-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.java-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
