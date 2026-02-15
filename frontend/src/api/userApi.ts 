@@ -1,0 +1,13 @@
+const API_URL = import.meta.env.VITE_API_URL;
+
+export type User = {
+  id: string;
+  name: string;
+  email: string;
+};
+
+export const getUsers = async (): Promise<User[]> => {
+  const res = await fetch(`${API_URL}/users`);
+  if (!res.ok) return [];
+  return res.json();
+};
