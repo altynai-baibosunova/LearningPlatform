@@ -1,4 +1,4 @@
-package com.example.demo.config;
+package com.learning.platform.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -12,13 +12,13 @@ import java.util.Arrays;
 @Configuration
 public class CorsConfig {
 
-    @Value("${app.cors.allowed-origins:http://localhost:3000}")
+    @Value("${app.cors.allowed-origins}")
     private String allowedOrigins;
 
-    @Value("${app.cors.allowed-methods:GET,POST,PUT,DELETE,OPTIONS}")
+    @Value("${app.cors.allowed-methods}")
     private String allowedMethods;
 
-    @Value("${app.cors.allowed-headers:Origin,Content-Type,Accept,Authorization}")
+    @Value("${app.cors.allowed-headers}")
     private String allowedHeaders;
 
     @Bean
@@ -33,5 +33,4 @@ public class CorsConfig {
         source.registerCorsConfiguration("/**", config);
         return new CorsFilter(source);
     }
-
 }
