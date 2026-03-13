@@ -1,3 +1,35 @@
+//import React, { useState } from "react";
+//import SectionsPanel from "./components/SectionsPanel";
+//import LectureNotes from "./components/LectureNotes";
+//import Conversations from "./components/Conversations";
+//import AIAssistant from "./components/AIAssistant";
+//import sectionsData from "./data/sectionsData";
+//import "./App.css";
+//
+//function App() {
+//
+//  const [selectedSection, setSelectedSection] = useState(null);
+//
+//  return (
+//    <div className="app-container">
+//
+//      <SectionsPanel
+//        sections={sectionsData}
+//        onSelect={setSelectedSection}
+//      />
+//
+//      <LectureNotes selectedSection={selectedSection} />
+//
+//      <Conversations />
+//
+//      <AIAssistant selectedSection={selectedSection} />
+//
+//    </div>
+//  );
+//}
+//
+//export default App;
+
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
