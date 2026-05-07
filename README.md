@@ -1,6 +1,6 @@
-# 🌱 Learn Sphere / Learning_Platform
+# 🌱 Learn Sphere
 
-**Learn Sphere (Learning Platform)** is a full-stack AI-powered learning platform built with **Spring Boot (backend)** and **React (frontend)**.  
+**Learn Sphere ** is a full-stack platform built with **Spring Boot (backend)** and **React (frontend)**.  
 It features **robust role-based authentication and authorization**, **JWT-secured sessions**, **persistent conversation history**, and **AI-powered interactive chat** for personalized learning.
 
 ---
